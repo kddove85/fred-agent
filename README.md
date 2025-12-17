@@ -22,7 +22,7 @@ AI Agent to retrieve and interpret data from the Federal Reserve Economic Data (
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/fred-agent.git cd fred-agent
+git clone https://github.com/yourusername/fred-agent.git
 ```
 2. Navigate to the project directory:
 ```bash
