@@ -4,6 +4,8 @@ import sys
 
 from mcp.server.fastmcp import FastMCP
 from tools.fred_tools import register_fred_tools
+from tools.rss_feed_tools import register_rss_feed_tools
+from tools.mcp_stock_tools import register_stock_tools
 
 # Configure logging
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO').upper()
@@ -19,8 +21,10 @@ host = os.getenv('MCP_HOST', '0.0.0.0')
 port = int(os.getenv('MCP_PORT', '8000'))
 mcp = FastMCP(server_name, host=host, port=port)
 
-logger.info("Registering weather tools...")
+logger.info("Registering tools...")
 register_fred_tools(mcp)
+register_rss_feed_tools(mcp)
+register_stock_tools(mcp)
 
 def main():
     """Initialize and run the MCP server."""

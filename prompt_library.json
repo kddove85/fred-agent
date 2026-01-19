@@ -1,0 +1,115 @@
+{
+  "prompts": {
+    "inflation_check": {
+      "template": "What's happening with inflation right now? Pull the latest CPI data from FRED and check recent economic news articles.",
+      "category": "inflation",
+      "description": "Quick inflation status check with data and news",
+      "variables": []
+    },
+    "inflation_deep_dive": {
+      "template": "Analyze inflation trends over the past {months} months. Break down by major categories (food, energy, housing, services) and compare to the Fed's 2% target. What's driving current inflation?",
+      "category": "inflation",
+      "description": "Detailed inflation analysis with category breakdown",
+      "variables": [
+        "months"
+      ]
+    },
+    "unemployment_trend": {
+      "template": "Analyze the unemployment trend over the past {period}. What do recent news articles say about the labor market?",
+      "category": "labor",
+      "description": "Unemployment trend analysis with news context",
+      "variables": [
+        "period"
+      ]
+    },
+    "labor_market_snapshot": {
+      "template": "Give me a complete labor market snapshot: unemployment rate, job openings, wage growth, and labor force participation. How does this compare to pre-pandemic levels?",
+      "category": "labor",
+      "description": "Comprehensive labor market overview",
+      "variables": []
+    },
+    "fed_rate_outlook": {
+      "template": "Based on current trends and recent economic news, what's your outlook for interest rates over the next {timeframe}? Provide confidence level and key factors to watch.",
+      "category": "fed_policy",
+      "description": "Interest rate outlook with confidence assessment",
+      "variables": [
+        "timeframe"
+      ]
+    },
+    "fed_announcements": {
+      "template": "What has the Federal Reserve announced recently? Only check official sources.",
+      "category": "fed_policy",
+      "description": "Recent Fed announcements from official sources only",
+      "variables": []
+    },
+    "economic_snapshot": {
+      "template": "Give me an economic snapshot: what's happening with GDP growth, inflation, and unemployment? Include both data and recent news.",
+      "category": "snapshot",
+      "description": "Quick overview of major economic indicators",
+      "variables": []
+    },
+    "recession_risk": {
+      "template": "Should I be worried about a recession in {year}? Analyze leading indicators like yield curve, unemployment trends, consumer spending, and business investment.",
+      "category": "snapshot",
+      "description": "Recession risk assessment",
+      "variables": [
+        "year"
+      ]
+    },
+    "housing_market": {
+      "template": "How is the housing market doing right now? Include home prices, sales volume, mortgage rates, and housing starts.",
+      "category": "sectors",
+      "description": "Housing market analysis",
+      "variables": []
+    },
+    "sector_analysis": {
+      "template": "Analyze the current state of the {sector} sector. What are the trends, challenges, and outlook?",
+      "category": "sectors",
+      "description": "Analysis of specific economic sector",
+      "variables": [
+        "sector"
+      ]
+    },
+    "historical_comparison": {
+      "template": "Compare current {indicator} to {comparison_period}. What's different and why does it matter?",
+      "category": "comparison",
+      "description": "Historical comparison of economic indicators",
+      "variables": [
+        "indicator",
+        "comparison_period"
+      ]
+    },
+    "inflation_drivers": {
+      "template": "What's driving inflation right now - supply issues or demand? Analyze both sides with evidence.",
+      "category": "inflation",
+      "description": "Supply vs demand analysis for inflation",
+      "variables": []
+    }
+  },
+  "categories": {
+    "inflation": [
+      "inflation_check",
+      "inflation_deep_dive",
+      "inflation_drivers"
+    ],
+    "labor": [
+      "unemployment_trend",
+      "labor_market_snapshot"
+    ],
+    "fed_policy": [
+      "fed_rate_outlook",
+      "fed_announcements"
+    ],
+    "snapshot": [
+      "economic_snapshot",
+      "recession_risk"
+    ],
+    "sectors": [
+      "housing_market",
+      "sector_analysis"
+    ],
+    "comparison": [
+      "historical_comparison"
+    ]
+  }
+}
