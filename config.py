@@ -4,14 +4,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    # OpenAI settings
-    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-    OPENAI_API_BASE = os.getenv('OPENAI_API_BASE')
-    OPENAI_API_VERSION = os.getenv('API_VERSION')
-    OPENAI_ORG = os.getenv('OPENAI_ORGANIZATION')
-    OPENAI_MODEL = os.getenv('MODEL')
+    FRED_API_KEY = os.getenv('FRED_API_KEY')
+    CENSUS_API_KEY = os.getenv('CENSUS_API_KEY')
 
-    # Agentic loop settings
-    MAX_ITERATIONS = 15
-    MAX_MESSAGES = 20
-    MAX_RESULT_LENGTH = 2000
+    MCP_SERVER_NAME = os.getenv('MCP_SERVER_NAME', 'fred-server')
+    MCP_HOST = os.getenv('MCP_HOST', '0.0.0.0')
+    MCP_PORT = int(os.getenv('MCP_PORT', '8000'))
+    MCP_TRANSPORT = os.getenv('MCP_TRANSPORT', 'stdio')
+
+    LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO').upper()

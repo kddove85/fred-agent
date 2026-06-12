@@ -1,0 +1,15 @@
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    env_file:
+      - .env
+    container_name: fred-mcp-server
+    ports:
+      - "8093:8000"
+    # Mount volume for development
+    volumes:
+      - ./:/app
+    # Restart policy
+    restart: unless-stopped
